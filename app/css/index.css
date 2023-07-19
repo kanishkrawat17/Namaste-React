@@ -1,0 +1,24 @@
+.resto-header {
+    height: 92px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.resto-header__logo--img {
+    height: 100%;
+    cursor: pointer;
+}
+
+.resto-header__right-actions {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    padding-right: 28px;
+}
+
+.resto-header__right-actions > li {
+    cursor: pointer;
+}
