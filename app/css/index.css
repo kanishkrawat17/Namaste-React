@@ -22,3 +22,13 @@
 .resto-header__right-actions > li {
     cursor: pointer;
 }
+
+.resto-food-card {
+    border: 1px solid black;
+    width: 200px;
+}
+
+.resto-food-card--img {
+    height: 100%;
+    width: 100%;
+}
