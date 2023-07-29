@@ -26,9 +26,23 @@
 .resto-food-card {
     border: 1px solid black;
     width: 200px;
+    padding: 8px;
 }
 
-.resto-food-card--img {
-    height: 100%;
+.resto-food__search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+.resto-food-card__img {
+    height: 240px;
     width: 100%;
+}
+.resto-food__restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
 }

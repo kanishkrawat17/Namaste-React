@@ -44,6 +44,7 @@ const Body = () => {
 
   return (
     <div className="resto-food__body">
+    <div className="resto-food__search-wrapper">
       <input
         className="resto-food__searchbox"
         placeholder="Search restaurant"
@@ -58,7 +59,10 @@ const Body = () => {
       >
         Search
       </button>
-      <RestaurantList restaurants={restaurants} />
+      </div>
+      <div className="resto-food__restaurant-list">
+        <RestaurantList restaurants={restaurants} />
+      </div>
     </div>
   );
 };
