@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Body from "./Body";
+import Footer from "./Footer";
 
 import "../css/index.css";
 
@@ -14,8 +15,9 @@ const App = () => {
   );
 };
 
-const Footer = () => {
-  return <h3>footer</h3>;
-};
-
 export default App;
+
+/*
+ -> Diff algo is written in React and in not in react-dom
+ ->  
+ */

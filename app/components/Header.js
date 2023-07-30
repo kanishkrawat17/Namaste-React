@@ -1,20 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import  Logo  from "../assets/images/Logo.png";
 
 const Header = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const navigate = useNavigate();
+
+    const handleAuthClick = () => {
+      setIsLoggedIn(!isLoggedIn);
+    };
+
+    const handleHeaderItemClick = (e) => {
+      const path = e.target.id;
+      navigate(path);
+    };
+
     return (
       <header className="resto-header">
         <div className="resto-header__logo">
           <img
             className="resto-header__logo--img"
-            src="https://elements-cover-images-0.imgix.net/b75e4852-12f5-4412-8a8d-f7eb511faec7?auto=compress%2Cformat&fit=max&w=2038&s=0196813888b6871f4461834b11344906"
+            src={Logo}
             alt="RestoChef"
           />
         </div>
-        <ul className="resto-header__right-actions">
-          <li className="resto-header__right-actions--home">Home</li>
-          <li className="resto-header__right-actions--aboutus">About us</li>
-          <li className="resto-header__right-actions--contacts">Contacts</li>
+        <ul className="resto-header__right-actions" onClick={handleHeaderItemClick}>
+          <li className="resto-header__right-actions--home" id="/">Home</li>
+          <li className="resto-header__right-actions--aboutus" id="about">About us</li>
+          <li className="resto-header__right-actions--contacts" id="contacts">Contacts</li>
         </ul>
+        <button onClick={handleAuthClick}>{isLoggedIn ? 'Logout' : 'Login'}</button> 
       </header>
     );
   };

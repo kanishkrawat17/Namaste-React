@@ -16,7 +16,14 @@
     gap: 20px;
     list-style: none;
     align-items: center;
-    padding-right: 28px;
+    padding-right: 20px;
+    flex: 1;
+    justify-content: end;
+}
+.resto-header__right-actions + button {
+    background: none;
+    border: none;
+    padding: 0 16px 0 0;
 }
 
 .resto-header__right-actions > li {
@@ -24,9 +31,11 @@
 }
 
 .resto-food-card {
-    border: 1px solid black;
     width: 200px;
     padding: 8px;
+    box-shadow: -8px 11px 8px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 16px;
 }
 
 .resto-food__search-wrapper {
@@ -46,3 +55,65 @@
     gap: 8px;
     justify-content: space-between;
 }
+
+.resto-food__searchbox {
+    width: 400px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.resto-food__search-btn {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #dfdee2;
+    cursor: pointer;
+}
+
+
+.resto-food-skeleton {
+    padding: 16px;
+    width: 200px;
+    display: inline-grid;
+    gap: 12px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resto-food-skeleton__imgpart {
+    width: 100%;
+    height: 246px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resto-food-skeleton__heading {
+    height: 12px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shimmerBG {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #ddd;
+    background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+    background-size: 1200px 100%;
+}
+
+@keyframes  shimmer {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.resto-food-restautants--loading {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
