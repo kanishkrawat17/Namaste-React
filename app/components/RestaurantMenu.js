@@ -8,17 +8,18 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   useEffect(() => {
-    // getMenuItems();
+    getMenuItems();
   }, []);
 
-//   const getMenuItems = async () => {
-//     const data = await fetch(SWIGGY_MENU_API_URL+resId);
-//     const json = await data.json();
+  const getMenuItems = async () => {
+    const data = await fetch(SWIGGY_MENU_API_URL+resId);
+    const json = await data.json();
 
-//     json.data.cards.forEach((item ) => {
-//         console.log(item?.groupedCard?.cardGroupMap?.REGULAR?.cards)
-//     });
-//   }
+    console.log(json.data.cards);
+    json.data.cards.forEach((item ) => {
+        console.log(item?.groupedCard?.cardGroupMap?.REGULAR?.cards)
+    });
+  }
   return (
     <div></div>
   )
